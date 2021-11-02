@@ -13,7 +13,7 @@
                                 Session::put('message',null);
                             }
                             ?>
->>>>>>> origin/CodeChucNang/NgocHai
+
             <div class="row">
                 <div class="col-sm-10 mt-3">
                     <form action="#" method="" style="width: 110%;margin-left: 20px;" enctype="multipart/form-data">
