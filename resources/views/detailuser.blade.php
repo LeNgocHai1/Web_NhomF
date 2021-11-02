@@ -4,6 +4,16 @@
     <div class="col-md-6">
         <div class="  bg-white border rounded border-info col-sm-10">
             <h3 class="mt-3" style="font-weight: bold; color: #4A235A;text-align: center;">Thông tin tài khoản</h3>
+
+==
+            <?php
+                            $message = Session::get('message');
+                            if($message){
+                                echo '<span class="text-alert">'.$message.'</span>';
+                                Session::put('message',null);
+                            }
+                            ?>
+>>>>>>> origin/CodeChucNang/NgocHai
             <div class="row">
                 <div class="col-sm-10 mt-3">
                     <form action="#" method="" style="width: 110%;margin-left: 20px;" enctype="multipart/form-data">
