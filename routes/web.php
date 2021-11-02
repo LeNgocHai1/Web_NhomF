@@ -28,7 +28,6 @@ Route::group(['prefix' => 'admin'], function () {
      });
    });
 
->>>>>>> origin/CodeChucNang/NgocHai
 Route::get('/', function () {
     return view('home');
 });
@@ -62,7 +61,6 @@ Auth::routes();
 Route::resources([
     'info'=>'UserController',
   ]);
->>>>>>> origin/CodeChucNang/NgocHai
 /**
  * end Diem
  */
