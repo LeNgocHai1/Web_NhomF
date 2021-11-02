@@ -6,7 +6,7 @@
 @extends('pages.admin.main')
 @section('content')
 <h5 style="font-weight: bold">SỬA THÔNG TIN NGƯỜI DÙNG</h5>
->>>>>>> origin/CodeChucNang/NgocHai
+
 <div class="container">
     <div class="row">
         <div class="col-sm-10">
@@ -20,7 +20,7 @@
             </div>
             <div class="form-group">
 
->>>>>>> origin/CodeChucNang/NgocHai
+
                 <label for="name" style="font-weight: bold">Tên người dùng</label>
                 <input type="text" name="name" id="name" class="form-control" value="{{ $user->name }}">
             </div>
@@ -45,7 +45,6 @@
 
                 <label for="role" style="font-weight: bold">Quyền Quản Trị</label>
                 <input type="text" name="role" id="role" class="form-control" value="{{ $user->role }}">
->>>>>>> origin/CodeChucNang/NgocHai
             </div>
          
       
@@ -54,7 +53,6 @@
                 <input type="submit" class="btn btn-info btn-sm" value="Lưu sản phẩm">
 
                 <input type="submit" class="btn btn-info btn-sm" value="Cập Nhập">
->>>>>>> origin/CodeChucNang/NgocHai
 
             </div>
 
