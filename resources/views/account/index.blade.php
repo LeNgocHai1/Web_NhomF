@@ -20,7 +20,6 @@
       <thead class="bg-warning"> 
         <tr class="text-white">
           <th>ID</th>
->>>>>>> origin/CodeChucNang/NgocHai
           <th>Tên Người dùng</th>
             <th>Email</th>
          <th>Số điện thoại</th>
@@ -44,7 +43,6 @@
           <td>{{ $user->email }}</td>
           <td>
                {{ $user->phonenumber }} 
->>>>>>> origin/CodeChucNang/NgocHai
           </td>
           <td>
               {{ $user->address }}
@@ -60,7 +58,6 @@
 
           <a class="button btn btn-success" href="{{ route('user.edit',$user->id) }}"><i class="fas fa-tools"></i>  Sửa</a>
             <form class="d-inline-block " onclick="return confirm('Bạn có chắc là muốn xóa danh mục này ko?')" action="{{ route('user.destroy',$user->id) }}"class="active styling-edit" ui-toggle-class="" method="post" >
->>>>>>> origin/CodeChucNang/NgocHai
               {{ csrf_field() }}
               @method('DELETE')
               {{-- HTML không có các method PUT, PATCH, DELETE, nên cần dùng lệnh @method để có thể gán các method này --}}
@@ -79,7 +76,6 @@
             </button>
 
             </form>
->>>>>>> origin/CodeChucNang/NgocHai
           
           </td>
         </tr>
