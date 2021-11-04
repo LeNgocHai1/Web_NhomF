@@ -19,6 +19,7 @@
                 <table class="table">
                     <thead class="bg-warning">
                         <tr class="text-white">
+                            <th>ID</th>
                             <th>Tên Người dùng</th>
                             <th>Email</th>
                             <th>Số điện thoại</th>
@@ -31,7 +32,7 @@
                     <tbody>
                         @foreach ($users as $user)
                         <tr>
-
+                            <td>{{ $user->id }}</td>
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->email }}</td>
                             <td>
@@ -68,13 +69,6 @@
                                         {{-- or --}}
                                         {{-- <input type="hidden" name="_token" value="{{ csrf_token() }}"> --}}
                                         {{-- <input type="hidden" name="_method" value="delete"> --}}
-
-
-                                        <button type="submit" class="button btn btn-danger"> <i
-                                                class="fas fa-trash-alt"></i> Xóa</button>
-                                    </form>
-
-
                                     <button type="submit" class="button btn btn-danger">
                                         <i class="fas fa-trash-alt"></i> Xóa user
 
