@@ -54,8 +54,6 @@ Route::get('/detail','AdminController@detailuser')->name('admin.detailuser');
 Route::get('/listuser', 'AdminController@listuser')->name('admin.listuser');
 
 
-Auth::routes();
-
 Route::get('/', function () {
     return view('home');
 });
