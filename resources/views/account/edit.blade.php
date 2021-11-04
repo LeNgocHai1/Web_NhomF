@@ -62,8 +62,4 @@
     </div>
 </div>
 
-    
-
-
->>>>>>> origin/CodeChucNang/NgocHai
 @endsection

@@ -11,6 +11,9 @@
 |
 */
 
+Route::get('/', function () {
+    return view('home');
+});
 
 /**
  * Hoang 
@@ -55,6 +58,7 @@ Route::group(['prefix' => 'admin'], function () {
        
      });
    });
+
 
 Route::get('/', function () {
     return view('home');
