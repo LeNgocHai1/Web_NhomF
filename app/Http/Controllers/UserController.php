@@ -67,9 +67,7 @@ class UserController extends Controller
         $user->email = $request->email;
         $user->phonenumber = $request->phonenumber;
         $user->address = $request->address;
-
-        Session::put('message','Sửa thông tin tài khoản thành công');
-        
+        Session::put('message','Sửa thông tin tài khoản thành công');  
         $user->save();
         return view('detailuser');
     }

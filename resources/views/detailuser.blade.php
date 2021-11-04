@@ -1,6 +1,5 @@
-    @extends('pages.customer.main')
-    @section('content')
-    <div style="height: 90px;"></div>
+@extends('pages.customer.main')
+@section('content')
     <div class="container-fluid jumbotron">
         <div class="row">
     </div>
