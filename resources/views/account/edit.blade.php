@@ -1,12 +1,7 @@
 
-@extends('layout.admin.main')
-@section('content')
-<h5 style="font-weight: bold">Chỉnh sữa sản phẩm</h5>
-
 @extends('pages.admin.main')
 @section('content')
 <h5 style="font-weight: bold">SỬA THÔNG TIN NGƯỜI DÙNG</h5>
-
 <div class="container">
     <div class="row">
         <div class="col-sm-10">
@@ -14,13 +9,6 @@
             {{ csrf_field() }}
             @method('PUT')
             <div class="form-group">
-
-                <label for="user" style="font-weight: bold">Quản lí người dùng</label>
-               
-            </div>
-            <div class="form-group">
-
-
                 <label for="name" style="font-weight: bold">Tên người dùng</label>
                 <input type="text" name="name" id="name" class="form-control" value="{{ $user->name }}">
             </div>
@@ -39,20 +27,11 @@
                 <input type="text" name="address" id="address" class="form-control" value="{{ $user->address }}">
             </div>
             <div class="form-group">
-
-                <label for="typeuser" style="font-weight: bold">Quyền Quản Trị</label>
-                <input type="text" name="typeuser" id="typeuser" class="form-control" value="{{ $user->typeuser }}">
-
                 <label for="role" style="font-weight: bold">Quyền Quản Trị</label>
                 <input type="text" name="role" id="role" class="form-control" value="{{ $user->role }}">
-            </div>
-         
-      
+            </div>  
             <div class="form-group">
-
-                <input type="submit" class="btn btn-info btn-sm" value="Lưu sản phẩm">
-
-                <input type="submit" class="btn btn-info btn-sm" value="Cập Nhập">
+                <input type="submit" class="btn btn-info btn-sm" value="Lưu sản phẩm">                <input type="submit" class="btn btn-info btn-sm" value="Cập Nhập">
 
             </div>
 

@@ -1,51 +1,6 @@
 
 @extends('pages.customer.main')
 @section('content')
-<div class="row">
-    <div class="col-md-6">
-        <div class="  bg-white border rounded border-info col-sm-10">
-            <h3 class="mt-3" style="font-weight: bold; color: #4A235A;text-align: center;">Thông tin tài khoản</h3>
-
-
-            <?php
-                            $message = Session::get('message');
-                            if($message){
-                                echo '<span class="text-alert">'.$message.'</span>';
-                                Session::put('message',null);
-                            }
-                            ?>
-
-            <div class="row">
-                <div class="col-sm-10 mt-3">
-                    <form action="#" method="" style="width: 110%;margin-left: 20px;" enctype="multipart/form-data">
-                        {{ csrf_field() }}
-                        @method('PUT')
-
-                        <div class="form-group">
-                            <label for="name" style="font-weight: bold">Tên người dùng</label>
-                            <input type="text" name="name" id="name" class="form-control"
-                                value="{{ Auth::user()->name }}">
-                        </div>
-                        <div class="form-group">
-                            <label for="email" style="font-weight: bold">Email</label>
-                            <input type="text" name="email" id="email" class="form-control"
-                                value="{{ Auth::user()->email }}">
-
-                        </div>
-
-                        <div class="form-group">
-                            <label for="sdt" style="font-weight: bold">Số điện thoại</label>
-                            <input type="text" name="sdt" id="address" class="form-control"
-                                value="{{ Auth::user()->phonenumber }}">
-                        </div>
-                        <div class="form-group">
-                            <label for="address" style="font-weight: bold">Địa chỉ</label>
-                            <input type="text" name="address" id="address" class="form-control"
-                                value="{{ Auth::user()->address }}">
-                        </div>
-    @extends('pages.customer.main')
-    @section('content')
-    <div style="height: 90px;"></div>
     <div class="container-fluid jumbotron">
         <div class="row">
     </div>
