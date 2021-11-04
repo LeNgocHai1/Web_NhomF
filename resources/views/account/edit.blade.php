@@ -1,6 +1,8 @@
+
 @extends('pages.admin.main')
 @section('content')
 <h5 style="font-weight: bold">SỬA THÔNG TIN NGƯỜI DÙNG</h5>
+
 <div class="container">
     <div class="row">
         <div class="col-sm-10">
@@ -8,6 +10,13 @@
             {{ csrf_field() }}
             @method('PUT')
             <div class="form-group">
+
+                <label for="user" style="font-weight: bold">Quản lí người dùng</label>
+               
+            </div>
+            <div class="form-group">
+
+
                 <label for="name" style="font-weight: bold">Tên người dùng</label>
                 <input type="text" name="name" id="name" class="form-control" value="{{ $user->name }}">
             </div>
@@ -32,6 +41,7 @@
          
       
             <div class="form-group">
+
                 <input type="submit" class="btn btn-info btn-sm" value="Cập Nhập">
 
             </div>
@@ -41,5 +51,4 @@
         </div>
     </div>
 </div>
-
 @endsection

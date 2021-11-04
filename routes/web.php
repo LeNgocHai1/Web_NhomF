@@ -10,23 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-//định tuyến đến trang admin
-Route::group(['prefix' => 'admin'], function () {
-    Route::group(['namespace'=>'admin'], function () {
-       Route::resources([
-           'category'=>'CategoryController',
-           'product'=>'ProductController',
-           'user'=>'UsersController',
-           'bill'=>'AdminBillController',
-           'banner'=>'BannerController',
-           'prodetail'=>'ProductdetailController'
-       ]);
-       Route::get('/','AdminController@index')->name('admin.index');
-       Route::post('find','AdminController@find')->name('admin.find');
-       
-     });
-   });
-
 Route::get('/', function () {
     return view('home');
 });
@@ -53,7 +36,29 @@ Route::get('/admins','AdminController@show')->name('admin.show');
 Route::get('/detail','AdminController@detailuser')->name('admin.detailuser');
 Route::get('/listuser', 'AdminController@listuser')->name('admin.listuser');
 
+
+
 Auth::routes();
+/**
+ * Hai
+ */
+//định tuyến đến trang admin
+Route::group(['prefix' => 'admin'], function () {
+    Route::group(['namespace'=>'admin'], function () {
+       Route::resources([
+           'category'=>'CategoryController',
+           'product'=>'ProductController',
+           'user'=>'UsersController',
+           'bill'=>'AdminBillController',
+           'banner'=>'BannerController',
+           'prodetail'=>'ProductdetailController'
+       ]);
+       Route::get('/','AdminController@index')->name('admin.index');
+       Route::post('find','AdminController@find')->name('admin.find');
+       
+     });
+   });
+
 
 // điều hướng đến trang thông tin tài khoản
 Route::resources([
