@@ -58,8 +58,8 @@ $(document).ready(function(){
 					<tr>
 						<td>{{data_get($category,'category_name')}}</td>
 					
-						<td>
-							<a href="{{route('manage-category.find',[$category->id])}}" class="edit"><i class="material-icons" title="Edit">&#xE254;</i></a>
+						<td style="display: flex;">
+							<a href="{{route('manage-category.find',[$category->id])}}" class="edit" style="padding-right: 2%"><i class="material-icons" title="Edit">&#xE254;</i></a>
 							<form action="{{route('manage-category.destroy',[$category->id])}}" method="post" onsubmit="return window.confirm('Delete this record?')">
 							@csrf
 							<button type="submit" class="delete" >
