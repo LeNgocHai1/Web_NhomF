@@ -3,21 +3,35 @@
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
         </a>
-        <a href="#">Product</a>
+        <a href="">Product</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
         </button>
-
+        <select class="form-control m-bot12" name="category" style="width: 9em;margin-left: 20px">
+        <option>CATEGORY</option>
+         @foreach ($listCat as $category)
+        <option value="{{ $category->id }}">{{data_get($category,'category_name')}}
+        </option>
+        @endforeach    
+        </select>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
-            <ul class="navbar-nav mr-auto">
 
+            <ul class="navbar-nav mr-auto">
+            <form class="s" style =" padding-left: 10%;display: flex;">
+            <input type="search" class="sb" name="q" autocomplete="off" placeholder="Tim kiem tai day" style="border: 2px solid gainsboro;border-radius: 20px 20px;"/>
+            <button type="submit" class="sbtn fa fa-search" style="margin-left: 2%;"></button>
+            </form>  
+
+
+</div>
             </ul>
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
                 <!-- Authentication Links -->
+                
                 @guest
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>

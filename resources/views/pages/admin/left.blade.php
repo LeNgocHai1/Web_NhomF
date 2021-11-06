@@ -34,12 +34,20 @@
               <i class="fas fa-user"></i>
               <p class="ml-2">
                 Quản lý người dùng
-              
+            
               </p>
             </a>
 
           </li>
-    
+          <li class="nav-item ml-2">
+            <a href="{{url('/admin/manage-category')}}" class="nav-link">
+              <i class="fas fa-user"></i>
+              <p class="ml-2">
+                Quản lý categogy
+              </p>
+            </a>
+
+          </li>
      
         </ul>
       </nav>
