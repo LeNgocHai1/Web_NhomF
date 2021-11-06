@@ -19,7 +19,6 @@
                 <table class="table">
                     <thead class="bg-warning">
                         <tr class="text-white">
-                            <th>ID</th>
                             <th>Tên Người dùng</th>
                             <th>Email</th>
                             <th>Số điện thoại</th>
