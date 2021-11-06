@@ -21,7 +21,9 @@
             <ul class="navbar-nav mr-auto">
             <form class="s" style =" padding-left: 10%;display: flex;">
             <input type="search" class="sb" name="q" autocomplete="off" placeholder="Tim kiem tai day" style="border: 2px solid gainsboro;border-radius: 20px 20px;"/>
-            <button type="submit" class="sbtn fa fa-search" style="margin-left: 2%;"></button>
+            <button type="submit" class="btn" style="margin-left: 2%;">
+            <i class="sbtn fa fa-search"></i>
+                </button>
             </form>  
 
 
