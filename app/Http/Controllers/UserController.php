@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Users;
 use Illuminate\Support\Facades\DB;
 use App\Bill;
+use App\CategoryModel;
 use App\BillDetail;
 use App\Customer;
 use Illuminate\Support\Facades\Session;
@@ -19,7 +20,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('detailuser');
+        $listCat = CategoryModel::all();
+        return view('detailuser',compact('listCat'));
     }
 
     /**
@@ -62,6 +64,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $listCat = CategoryModel::all();
         $user = Users::find($id);
         $user->name = $request->name;
         $user->email = $request->email;
@@ -69,8 +72,9 @@ class UserController extends Controller
         $user->address = $request->address;
         Session::put('message','Sửa thông tin tài khoản thành công');  
         $user->save();
-        return view('detailuser');
+        return view('detailuser',compact('listCat'));
     }
 
 
 }
+
