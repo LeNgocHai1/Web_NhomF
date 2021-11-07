@@ -17,7 +17,8 @@ class AdminController extends Controller
 {
     public function index()
     {
-        return view('home');
+        $listCat = CategoryModel::all();
+        return view('home',compact('listCat'));
     }
 
     public function show()
