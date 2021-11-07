@@ -36,6 +36,7 @@ class AdminController extends Controller
         return view('account.index',['users'=>$users])->compact('listCat');
     }
     public function doimatkhau(Request $request){
+        $listCat = CategoryModel::all();
         $this->validate($request, [
             'oldpassword' => 'required',
             'password' => 'required|string|min:6|confirmed',
@@ -48,7 +49,7 @@ class AdminController extends Controller
             $user->password = Hash::make($request->password);
             $user->save();
             Session::flash('sub', 'Bạn đã đổi mật khẩu thành công!');
-            return view('detailuser');
+            return view('detailuser',compact('listCat'));
         }
         else{
             Session::flash('sub', 'Email hoặc mật khẩu không đúng!');
