@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Users;
+use App\CategoryModel;
 use Auth;
 use Session;
 use Illuminate\Support\Facades\Hash;
@@ -25,12 +26,14 @@ class AdminController extends Controller
     }
     
     public function detailuser(){
-       return view('detailuser');
+        $listCat = CategoryModel::all();
+       return view('detailuser',compact('listCat'));
     }
 
     public function listuser(){
+        $listCat = CategoryModel::all();
         $users = Users::where('role','user')->get();
-        return view('account.index',['users'=>$users]);
+        return view('account.index',['users'=>$users])->compact('listCat');
     }
     public function doimatkhau(Request $request){
         $this->validate($request, [
